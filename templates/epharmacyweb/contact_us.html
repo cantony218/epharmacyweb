@@ -1,0 +1,51 @@
+{% extends "../base.html" %}
+{% load static %}
+{% block title %}Contact Us{% endblock %}
+{% block content %}
+<style>
+    .contact-form input {
+        border: 2px solid #ccc;
+        height: calc(2em + .75rem + 2px);
+        width: 100%;
+        border-radius: 4px;
+    }
+    
+    .contact-form textarea {
+        border: 2px solid #ccc;
+        height: 200px;
+        border-radius: 4px;
+    }
+
+    .contact-form input:focus {
+        border-color: #1497ff;
+        box-shadow: none;
+    }
+</style>
+<center>
+    <br></br>
+    <h1>Contact Form</h1>
+</center>
+
+<div class="container">
+    <form class="contact-form p-4" method="POST">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="fname">Name</label>
+            <input name="name" type="text" id="fname" class="form-control">
+
+            <label for="exampleInputEmail1">Email</label>
+            <input name="email" class="form-control" id="exampleInputEmail1" type="text">
+
+            <label for="subject">Subject</label>
+            <input name="subject" class="form-control" id="subject" type="text">
+
+            <label for="message">Message</label>
+            <textarea class="form-control" id="message" name="message"></textarea>
+            
+            <center>
+                <button class="btn btn-success py-2 mb-4 mt-5 fw-bold" type="submit" value="Submit">Submit</button>
+            </center>
+        </div>
+    </form>
+</div>
+{% endblock %}

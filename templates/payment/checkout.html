@@ -1,0 +1,224 @@
+{% extends "./sub_base.html" %}
+{% load static %}
+{% block title %}Checkout{% endblock %}
+{% block sub_content %}
+                            
+<form>
+    <h3 class="mb-3">Billing Address:</h3>
+
+        <div id="card-errors" class="a" role="alert"></div>
+        <div class="row g-3">
+            <div class="col-12">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="custName" placeholder="" required>
+                    <div class="invalid-feedback">
+                        Name is required
+                    </div>
+            </div>
+            <div class="col-12">
+                <label for="email" class="form-label">Email <span class="text-muted">(Optional)</span></label>
+                <input type="email" class="form-control" id="email" placeholder="">
+                    <div class="invalid-feedback">
+                        Please enter a valid email address for shipping updates.
+                    </div>
+            </div>
+            <div class="col-12">
+                <label for="address" class="form-label">Address</label>
+                <input type="text" class="form-control" id="custAdd" placeholder="" required>
+                <div class="invalid-feedback">
+                    Please enter a shipping address.
+                </div>
+            </div>
+            <div class="col-12">
+                <label for="address2" class="form-label">Address Line 2 <span class="text-muted">(Optional)</span></label>
+                <input type="text" class="form-control" id="custAdd2" placeholder="Apartment or suite">
+            </div>
+            <div class="col-md-5">
+                <label for="city" class="form-label">City</label>
+                <input type="text" class="form-control" id="city" placeholder="" required>
+                <div class="invalid-feedback">
+                    Please enter the shipping city.
+                </div>
+            </div>
+            <div class="col-md-4">
+                <label for="state" class="form-label">State</label>
+                <select class="form-select" id="state" required>
+                    <option value="">Select...</option>
+                        <option>Alabama</option>
+                        <option>Alaska</option>
+                        <option>Arizona</option>
+                        <option>Arkansas</option>
+                        <option>California</option>
+                        <option>Colorado</option>
+                        <option>Connecticut</option>
+                        <option>Delaware</option>
+                        <option>Florida</option>
+                        <option>Georgia</option>
+                        <option>Hawaii</option>
+                        <option>Idaho</option>
+                        <option>Illinois</option>
+                        <option>Indiana</option>
+                        <option>Iowa</option>
+                        <option>Kansas</option>
+                        <option>Kentucky</option>
+                        <option>Louisiana</option>
+                        <option>Maine</option>
+                        <option>Maryland</option>
+                        <option>Massachusetts</option>
+                        <option>Michigan</option>
+                        <option>Minnesota</option>
+                        <option>Mississippi</option>
+                        <option>Missouri</option>
+                        <option>Montana</option>
+                        <option>Nebraska</option>
+                        <option>Nevada</option>
+                        <option>New Hampshire</option>
+                        <option>New Jersey</option>
+                        <option>New Mexico</option>
+                        <option>New York</option>
+                        <option>North Carolina</option>
+                        <option>North Dakota</option>
+                        <option>Ohio</option>
+                        <option>Oklahoma</option>
+                        <option>Oregon</option>
+                        <option>Pennsylvania</option>
+                        <option>Rhode Island</option>
+                        <option>South Carolina</option>
+                        <option>South Dakota</option>
+                        <option>Tennessee</option>
+                        <option>Texas</option>
+                        <option>Utah</option>
+                        <option>Vermont</option>
+                        <option>Virginia</option>
+                        <option>Washington</option>
+                        <option>West Virginia</option>
+                        <option>Wisconsin</option>
+                        <option>Wyoming</option>
+                </select>
+                <div class="invalid-feedback">
+                    Please provide a state.
+                </div>
+            </div>
+            <div class="col-md-3">
+                <label for="Postcode" class="form-label">Zip Code</label>
+                <input type="text" class="form-control" id="zipCode" placeholder="" required>
+                    <div class="invalid-feedback">
+                        Zip code required
+                    </div>
+            </div>
+        </div>
+        <br></br>
+        <h3 class="mb-3">Shipping Address:</h3>
+
+        <div id="card-errors" class="a" role="alert"></div>
+        <div class="row g-3">
+            <div class="col-12">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="custName" placeholder="" required>
+                    <div class="invalid-feedback">
+                        Name is required
+                    </div>
+            </div>
+            <div class="col-12">
+                <label for="address" class="form-label">Address</label>
+                <input type="text" class="form-control" id="custAdd" placeholder="" required>
+                <div class="invalid-feedback">
+                    Please enter a shipping address.
+                </div>
+            </div>
+            <div class="col-12">
+                <label for="address2" class="form-label">Address Line 2 <span class="text-muted">(Optional)</span></label>
+                <input type="text" class="form-control" id="custAdd2" placeholder="Apartment or suite">
+            </div>
+            <div class="col-md-5">
+                <label for="city" class="form-label">City</label>
+                <input type="text" class="form-control" id="city" placeholder="" required>
+                <div class="invalid-feedback">
+                    Please enter the shipping city.
+                </div>
+            </div>
+            <div class="col-md-4">
+                <label for="state" class="form-label">State</label>
+                <select class="form-select" id="state" required>
+                    <option value="">Select...</option>
+                        <option>Alabama</option>
+                        <option>Alaska</option>
+                        <option>Arizona</option>
+                        <option>Arkansas</option>
+                        <option>California</option>
+                        <option>Colorado</option>
+                        <option>Connecticut</option>
+                        <option>Delaware</option>
+                        <option>Florida</option>
+                        <option>Georgia</option>
+                        <option>Hawaii</option>
+                        <option>Idaho</option>
+                        <option>Illinois</option>
+                        <option>Indiana</option>
+                        <option>Iowa</option>
+                        <option>Kansas</option>
+                        <option>Kentucky</option>
+                        <option>Louisiana</option>
+                        <option>Maine</option>
+                        <option>Maryland</option>
+                        <option>Massachusetts</option>
+                        <option>Michigan</option>
+                        <option>Minnesota</option>
+                        <option>Mississippi</option>
+                        <option>Missouri</option>
+                        <option>Montana</option>
+                        <option>Nebraska</option>
+                        <option>Nevada</option>
+                        <option>New Hampshire</option>
+                        <option>New Jersey</option>
+                        <option>New Mexico</option>
+                        <option>New York</option>
+                        <option>North Carolina</option>
+                        <option>North Dakota</option>
+                        <option>Ohio</option>
+                        <option>Oklahoma</option>
+                        <option>Oregon</option>
+                        <option>Pennsylvania</option>
+                        <option>Rhode Island</option>
+                        <option>South Carolina</option>
+                        <option>South Dakota</option>
+                        <option>Tennessee</option>
+                        <option>Texas</option>
+                        <option>Utah</option>
+                        <option>Vermont</option>
+                        <option>Virginia</option>
+                        <option>Washington</option>
+                        <option>West Virginia</option>
+                        <option>Wisconsin</option>
+                        <option>Wyoming</option>
+                </select>
+                <div class="invalid-feedback">
+                    Please provide a state.
+                </div>
+            </div>
+            <div class="col-md-3">
+                <label for="Postcode" class="form-label">Zip Code</label>
+                <input type="text" class="form-control" id="zipCode" placeholder="" required>
+                    <div class="invalid-feedback">
+                        Zip code required
+                    </div>
+            </div>
+        </div>
+        <hr class="my-4">
+        <h4 class="mb-3">Payment</h4>
+        <label for="card-element">Credit or Debit card</label>
+        <div id="card-element" class="form-control form-control-payment">
+
+        </div>
+        <br>
+            <button id="submit" class="btn btn-primary w-100 fw-bold" data-secret="{{ client_secret }}">Pay</button>
+        </br>
+</form>
+
+<script>
+    var CSRF_TOKEN = '{{ csrf_token }}';
+</script>
+<script src="https://js.stripe.com/v3/"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="{% static 'payment/index.js' %}" data-rel-js></script>
+{% endblock %}

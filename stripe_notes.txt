@@ -1,0 +1,7 @@
+stripe login
+stripe listen --forward-to localhost:8000/payment/webhook/
+
+Stripe payments:
+No Auth: 4242 4242 4242 4242
+Auth: 4000 0000 0000 3220
+Fail: 4000 0000 0000 9995
